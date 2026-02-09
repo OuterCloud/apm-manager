@@ -1,0 +1,23 @@
+# 基本依赖
+solox==2.9.3  # iOS和Android性能监控工具
+pure-python-adb==0.3.0.dev0  # Android设备管理工具
+tidevice==0.12.10  # iOS设备管理工具
+setuptools>=76.0.0  # 提供pkg_resources模块，解决tidevice依赖问题
+
+# 调度功能
+schedule  # 任务调度库
+
+# 数据处理和可视化
+pandas>=1.3.0  # 数据处理
+matplotlib>=3.4.0  # 图表生成
+seaborn>=0.11.0  # 统计数据可视化
+
+# 工具依赖
+psutil>=5.8.0  # 系统和进程监控
+requests>=2.26.0  # HTTP请求
+loguru # 日志记录
+
+# 开发依赖
+setuptools==76.0.0
+wheel==0.45.1
+setuptools_scm  # 用于版本管理

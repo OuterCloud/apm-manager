@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools == 76.0.0", "wheel == 0.45.1", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages]
+find = { include = ["apm_manager"] }
+
+[project]
+name = "apm_manager"
+dynamic = ["version"]
+description = "APM Manager - A Mobile Application Performance Monitoring Tool"
+dependencies = [
+    "solox == 2.9.3",
+    "pure-python-adb == 0.3.0.dev0",
+    "tidevice",
+    "schedule >= 1.1.0",
+    "pandas >= 1.3.0",
+    "matplotlib >= 3.4.0",
+    "seaborn >= 0.11.0",
+    "psutil >= 5.8.0",
+    "requests >= 2.26.0",
+    "loguru",
+]
+requires-python = ">=3.10"
+authors = [{ name = "zenkilan", email = "434209210@qq.com" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = [
+    "apm",
+    "solox",
+    "performance",
+    "monitoring",
+    "ios",
+    "android",
+    "mobile",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Testing",
+    "Topic :: System :: Monitoring",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/lantianyou/apm_manager"
+"Bug Tracker" = "https://github.com/lantianyou/apm_manager/issues"
+
+[project.scripts]
+apm-manager = "apm_manager.monitor_app_performance:main"
+apm-batch = "apm_manager.batch_monitor:main"
+apm-viewer = "apm_manager.report_viewer:main"
+
+[tool.setuptools.dynamic]
+version = { file = "version.txt" }

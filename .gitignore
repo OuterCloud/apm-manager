@@ -1,0 +1,7 @@
+venv_3.13
+report
+__pycache__
+build
+apm_manager.egg-info
+.DS_Store
+performance_reports
